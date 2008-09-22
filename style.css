@@ -180,6 +180,11 @@ input, textarea, select {
 
 /* Post */
 
+.post > h1.title > a, .post > h2.title > a {
+	color: inherit;
+	text-decoration: none;
+}
+
 .post {
 }
 

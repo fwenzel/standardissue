@@ -12,7 +12,7 @@
 		if (have_posts()) :
 			$count = 0;
 		?>
-		<?php while (have_posts()) : the_post(); $h_tag = ((++$counter)==1?'h1':'h2'); ?>
+		<?php while (have_posts()) : the_post(); $h_tag = (++$count==1?'h1':'h2'); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<<?=$h_tag?> class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></<?=$h_tag?>>
 			<div class="entry">
@@ -21,9 +21,10 @@
 			</div>
 			<div class="meta">
 				<p class="byline">Posted on July 21, 2007 by NodeThirtyThree</p>
-				<p class="links"><a href="#" class="more">Read full article</a> <b>|</b> <a href="#" class="comments">Comments (32)</a></p>
+				<p class="links"><a href="<?php the_permalink() ?>" class="more">Permalink</a> <b>|</b> <a href="#" class="comments">Comments (32)</a></p>
 			</div>
 		</div>
+		<?php endwhile; ?>
 		<div class="post">
 			<h2 class="title">Lorem Ipsum Dolor Volutpat</h2>
 			<div class="entry">
