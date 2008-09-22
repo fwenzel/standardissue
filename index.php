@@ -8,8 +8,13 @@
 			<p><img src="images/img04.jpg" alt="" width="74" height="79" class="left" /><strong>Volutpat at varius</strong> sed sollicitudin et, arcu. Vivamus viverra. Nullam turpis. Vestibulum eros. Cras lobortis <a href="#">eget nonummy</a>. Vestibulum vel purus. In eget odio in sapien adipiscing sed blandit. Quisque augue tortor, facilisis sit amet, aliquam.</p>
 		</div>
 		*/ ?>
-		<div class="post">
-			<h1 class="title">Welcome to StandardIssue 1.0</h1>
+		<?php
+		if (have_posts()) :
+			$count = 0;
+		?>
+		<?php while (have_posts()) : the_post(); $h_tag = ((++$counter)==1?'h1':'h2'); ?>
+		<div class="post" id="post-<?php the_ID(); ?>">
+			<<?=$h_tag?> class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></<?=$h_tag?>>
 			<div class="entry">
 				<p>This is StandardIssue 1.0, a free, fully standards-compliant CSS template designed by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a> for <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attributions 2.5</a> license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
 				<p>Be sure to check out some of my commercial work over at <a href="http://www.4templates.com/?aff=nodethirtythree">4Templates</a>. This template is also available as a <a href="http://www.freewpthemes.net/preview/standardissue/">WordPress theme</a> at <a href="http://www.freewpthemes.net/">Free WordPress Themes</a>.</p>
@@ -29,47 +34,20 @@
 				<p class="links"><a href="#" class="more">Read full article</a> <b>|</b> <a href="#" class="comments">Comments (32)</a></p>
 			</div>
 		</div>
+		
+		<?php else : ?>
+		
+		<h1>Nothing Found</h1>
+		<p>Sorry, but you've either searched for something that wasn't found, or for some other reason I don't know what do show you right now.</p>
+		<p>If you want, you can <a href="<?=get_option('home');?>/">start over on the front page</a>, or try your luck searching:</p>
+		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
+		
+		<?php endif; ?>
 	</div>
 	<!-- end content -->
-	<!-- start sidebar -->
-	<div id="sidebar">
-		<ul>
-			<li id="search">
-				<h2><b>Search</b></h2>
-				<form method="get" action="">
-					<fieldset>
-					<input type="text" id="s" name="s" value="" />
-					<input type="submit" id="x" value="Search" />
-					</fieldset>
-				</form>
-			</li>
-			<li>
-				<h2><b>Lorem</b> Ipsum</h2>
-				<ul>
-					<li><a href="#">Fusce dui neque fringilla</a></li>
-					<li><a href="#">Eget tempor eget nonummy</a></li>
-					<li><a href="#">Magna lacus bibendum mauris</a></li>
-					<li><a href="#">Nec metus sed donec</a></li>
-					<li><a href="#">Magna lacus bibendum mauris</a></li>
-					<li><a href="#">Velit semper nisi molestie</a></li>
-					<li><a href="#">Eget tempor eget nonummy</a></li>
-				</ul>
-			</li>
-			<li>
-				<h2><b>Volutpat</b> Dolore</h2>
-				<ul>
-					<li><a href="#">Nec metus sed donec</a></li>
-					<li><a href="#">Magna lacus bibendum mauris</a></li>
-					<li><a href="#">Velit semper nisi molestie</a></li>
-					<li><a href="#">Eget tempor eget nonummy</a></li>
-					<li><a href="#">Nec metus sed donec</a></li>
-					<li><a href="#">Magna lacus bibendum mauris</a></li>
-					<li><a href="#">Velit semper nisi molestie</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-	<!-- end sidebar -->
+	
+	<?php get_sidebar(); ?>
+	
 	<div style="clear: both;">&nbsp;</div>
 
 <?php get_footer(); ?>
