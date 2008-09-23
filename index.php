@@ -16,30 +16,37 @@
 		<div class="post" id="post-<?php the_ID(); ?>">
 			<<?=$h_tag?> class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></<?=$h_tag?>>
 			<div class="entry">
-				<p>This is StandardIssue 1.0, a free, fully standards-compliant CSS template designed by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a> for <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. This free template is released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attributions 2.5</a> license, so you’re pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
-				<p>Be sure to check out some of my commercial work over at <a href="http://www.4templates.com/?aff=nodethirtythree">4Templates</a>. This template is also available as a <a href="http://www.freewpthemes.net/preview/standardissue/">WordPress theme</a> at <a href="http://www.freewpthemes.net/">Free WordPress Themes</a>.</p>
+				<?php the_content('Read on &raquo;'); ?>
 			</div>
 			<div class="meta">
-				<p class="byline">Posted on July 21, 2007 by NodeThirtyThree</p>
-				<p class="links"><a href="<?php the_permalink() ?>" class="more">Permalink</a> <b>|</b> <a href="#" class="comments">Comments (32)</a></p>
+				<p class="byline"><?php the_time('F jS, Y') ?> <!-- by <?php the_author() ?> --></p>
+				<p class="links"><a href="<?php the_permalink() ?>" class="more">Permalink</a> <b>|</b> <a href="<?php comments_link(); ?>" class="comments"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
+				<p class="categories">Categories: <?php the_category(', '); the_tags(' | Tags: ', ', ', ''); ?></p>
+				<?php edit_post_link('Edit', '<p class="links admin">', '</p>'); ?>
 			</div>
 		</div>
 		<?php endwhile; ?>
-		<div class="post">
-			<h2 class="title">Lorem Ipsum Dolor Volutpat</h2>
-			<div class="entry">
-				<p>Curabitur tellus. Phasellus tellus turpis, iaculis in, faucibus lobortis, posuere in, lorem. Donec a ante. Donec neque purus, adipiscing id, eleifend a, cursus vel, odio. Vivamus varius justo sit amet leo. Morbi sed libero. Vestibulum blandit augue at mi. Praesent fermentum lectus eget diam. Nam cursus, orci sit amet porttitor iaculis, ipsum massa aliquet nulla, non elementum mi elit a mauris. In hac habitasse platea.</p>
-			</div>
-			<div class="meta">
-				<p class="byline">Posted on July 18, 2007 by NodeThirtyThree</p>
-				<p class="links"><a href="#" class="more">Read full article</a> <b>|</b> <a href="#" class="comments">Comments (32)</a></p>
-			</div>
+		
+		<?php if (is_single()) : ?>
+		
+		<div id="page-switch">
+			<div class="alignleft"><?php previous_post_link() ?></div>
+			<div class="alignright"><?php next_post_link() ?></div>
 		</div>
+		<?php comments_template(); ?>
+		
+		<?php else : ?>
+		<div id="page-switch">
+			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
+			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+		</div>
+		<?php endif; ?>
 		
 		<?php else : ?>
 		
 		<h1>Nothing Found</h1>
-		<p>Sorry, but you've either searched for something that wasn't found, or for some other reason I don't know what do show you right now.</p>
+		<p>Sorry, but you've either searched for something that wasn't found, or for some other reason I don't know what do show you right now. So let me show you some cat content to ease the pain:</p>
+		<p><img src="<?php bloginfo('template_url')?>/images/cat_content.jpg" width="500" height="341" title="Cat content; source: Cute overload (http://mfrost.typepad.com/cute_overload/2008/09/where-were-thos.html)"/></p>
 		<p>If you want, you can <a href="<?=get_option('home');?>/">start over on the front page</a>, or try your luck searching:</p>
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 		

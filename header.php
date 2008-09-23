@@ -18,16 +18,16 @@
 <!-- start header -->
 <div id="header">
 	<div id="logo">
-		<h1><a href="<?=get_option('home');?>/"><?php bloginfo('name'); ?></a></h1>
+		<h1><a href="<?php bloginfo('url');?>/"><?php bloginfo('name'); ?></a></h1>
 		<h2><?php bloginfo('description'); ?></h2>
 	</div>
 	<div id="menu">
 		<ul>
-			<li class="active"><a href="#"> home</a></li>
-			<li><a href="#">photos</a></li>
-			<li><a href="#">about</a></li>
-			<li><a href="#">links</a></li>
-			<li><a href="#">contact </a></li>
+			<li <?php if (is_home()) echo 'class="active"';?>><a href="<?php bloginfo('url');?>/">home</a></li>
+			<li><a href="http://flickr.com/freeed">photos</a></li>
+			<!--<li <?php if (is_page('projects'));?>><a href="<?php bloginfo('url');?>/projects">my projects</a></li>-->
+			<li <?php if (is_page('about-me'));?>><a href="<?php bloginfo('url');?>/about-me">about</a></li>
+			<li <?php if (is_page('impressum'));?>><a href="<?php bloginfo('url');?>/impressum">impressum</a></li>
 		</ul>
 	</div>
 </div>

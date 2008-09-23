@@ -60,15 +60,19 @@ img {
 	border: none;
 }
 
-img.left {
+img.left,
+.alignleft {
 	float: left;
 	margin-right: 15px;
 }
 
-img.right {
+img.right,
+.alignright {
 	float: right;
 	margin-left: 15px;
 }
+
+
 
 /* Form */
 
@@ -178,6 +182,12 @@ input, textarea, select {
 	width: 575px;
 }
 
+#content #page-switch {
+	font-size: 1.1em;
+	margin-top: 2em;
+	clear: both;
+}
+
 /* Post */
 
 .post > h1.title > a, .post > h2.title > a {
@@ -205,7 +215,7 @@ input, textarea, select {
 
 .post .meta p {
 	margin: 0;
-	line-height: normal;
+	line-height: 1.3em;
 	color: #999999;
 }
 
@@ -217,14 +227,24 @@ input, textarea, select {
 	float: right;
 }
 
+.post .meta .categories {
+	float: left;
+	clear: both;
+}
+
+.post .meta .admin {
+	padding-left: 20px;
+	background: url('images/wrench.png') no-repeat left center;
+}
+
 .post .meta .more {
-	padding: 0 20px 0 18px;
-	background: url('images/img06.gif') no-repeat left center;
+	padding: 2px 20px 2px 20px;
+	background: url('images/page_link.png') no-repeat left center;
 }
 
 .post .meta .comments {
-	padding-left: 22px;
-	background: url('images/img07.gif') no-repeat left center;
+	padding: 2px 0 2px 20px;
+	background: url('images/comments.png') no-repeat left center;
 }
 
 .post .meta b {
@@ -317,9 +337,9 @@ input, textarea, select {
 /* Footer */
 
 #footer {
-	height: 280px;
-	min-height: 280px;
+	min-height: 80px;
 	padding: 130px 0 0 0;
+	margin-bottom: 0;
 	background: #003347 url('images/footer-bg.gif') repeat-x;
 }
 
@@ -334,9 +354,11 @@ html>body #footer {
 
 #legal {
 	clear: both;
-	padding-top: 20px;
+	padding: 20px 0;
+	margin-bottom: 0;
 	text-align: center;
 	color: #868D8F;
+	font-size: .9em;
 }
 
 #legal a {
@@ -359,4 +381,14 @@ html>body #footer {
 #fbox3 {
 	width: 200px;
 	padding-left: 70px;
+}
+
+#subscribe li {
+	list-style-position: inside;
+	list-style-image: url('images/rss-icon.png');
+}
+
+#people li {
+	list-style-position: inside;
+	list-style-image: url('images/user.png');
 }
