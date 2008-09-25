@@ -251,6 +251,61 @@ input, textarea, select {
 	display: none;
 }
 
+/* Comments */
+#comments {
+	margin-top: 5em;
+	padding: 15px 0 60px 0;
+	background: url('images/img03.gif') repeat-x;
+	clear: both;
+}
+
+#comments h3 {
+	margin: 1em 0;
+}
+
+.commentlist {
+	padding: 0;
+}
+
+.commentlist li {
+	list-style: none;
+	border: solid 2px #EEEEEE;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.commentlist li p {
+	margin-bottom: 1em;
+}
+
+.commentmetadata,
+.commentmetadata a {
+	font-size: .9em;
+	color: #999999;
+}
+
+.commentmetadata .commentauthor {
+	padding: 2px 0 2px 20px;
+	background: url('images/user_comment.png') no-repeat left center;
+}
+
+.commentlist .avatar {
+	float: right;
+	margin: .5em;
+}
+
+/* the boss' comments */
+.commentlist li.author {
+	background: #eee;
+}
+.commentlist .author .commentmetadata,
+.commentlist .author .commentmetadata a {
+	color: inherit;
+}
+.commentlist .author .commentmetadata .commentauthor {
+	background: url('images/user_green.png') no-repeat left center;
+}
+
 /* Sidebar */
 
 #sidebar {
