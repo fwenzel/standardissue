@@ -276,15 +276,19 @@ input, textarea, select {
 
 .post blockquote.magazinequote {
     float: right;
-    //font-family:Georgia, Arial, Serif;
     font-size: 1.25em;
     background: none;
     width: 150px;
-    border-top: #BABABA 3px solid;
-    border-bottom: #BABABA 3px solid;
+    border-top: #003347 3px solid;
+    border-bottom: #003347 3px solid;
+    border-left: none;
     margin: 1em;
     padding: 1em;
-    color: #BABABA;
+    color: #003347;
+}
+
+.post blockquote.magazinequote p:last-child {
+    margin-bottom: 0;
 }
 
 /* Comments */

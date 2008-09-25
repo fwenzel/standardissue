@@ -1,4 +1,7 @@
 <?php
+// content width determines the width of "full-size" images
+$GLOBALS['content_width'] = 575;
+
 if ( function_exists('register_sidebar') ) {
 	register_sidebar();
     // own search box
