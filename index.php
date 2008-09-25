@@ -18,12 +18,14 @@
 			<div class="entry">
 				<?php the_content('Read on &raquo;'); ?>
 			</div>
+			<?php if (!is_page()) : ?>
 			<div class="meta">
 				<p class="byline"><?php the_time('F jS, Y') ?> <!-- by <?php the_author() ?> --></p>
 				<p class="links"><a href="<?php the_permalink() ?>" class="more">Permalink</a> <b>|</b> <a href="<?php comments_link(); ?>" class="comments"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a></p>
 				<p class="categories">Categories: <?php the_category(', '); the_tags(' | Tags: ', ', ', ''); ?></p>
 				<?php edit_post_link('Edit', '<p class="links admin">', '</p>'); ?>
 			</div>
+			<?php endif; ?>
 		</div>
 		<?php endwhile; ?>
 		
