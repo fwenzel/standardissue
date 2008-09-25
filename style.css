@@ -308,7 +308,7 @@ input, textarea, select {
 
 .commentlist .avatar {
 	float: right;
-	margin: .5em;
+	margin: 0 0 .7em .7em;
 }
 
 /* the boss' comments */
