@@ -19,8 +19,9 @@
 
 <!-- You can start editing here. -->
 
+<div id="comments">
 <?php if ($comments) : ?>
-	<h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3> 
+	<h3><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
 	<!-- Comment page numbers -->
 	<?php if ($paged_comments->pager->num_pages() > 1): ?>
@@ -28,22 +29,19 @@
 	<?php endif; ?>
 	<!-- End comment page numbers -->
 
-	<ol class="commentlist" style="list-style-type: none;">
+	<ol class="commentlist">
 
 	<?php foreach ($comments as $comment) : ?>
 
-		<li class="<?php echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
-			<div class="comment-number"><?php echo $comment_number; $comment_number += $comment_delta;?></div>
-			<cite><?php comment_author_link() ?></cite> Says:
+		<li class="<?php if ($comment->comment_author_email == 'freeed@gmail.com') echo 'author'; else echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
+			<?php /* <div class="comment-number"><?php echo $comment_number; $comment_number += $comment_delta;?></div> */ ?>
+			<?php comment_text() ?>
+
+			<div class="commentmetadata"<span class="commentauthor"><?php comment_author_link() ?></span> on <a href="#comment-<?php comment_ID() ?>" title="Permanent link to this comment"><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></div>
+
 			<?php if ($comment->comment_approved == '0') : ?>
 			<em>Your comment is awaiting moderation.</em>
 			<?php endif; ?>
-			<br />
-
-			<small class="commentmetadata"><a href="<?php echo paged_comments_url('comment-'.get_comment_ID()); ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('e','',''); ?></small>
-
-			<?php comment_text() ?>
-
 		</li>
 
 	<?php /* Changes every other comment to a different class */	
@@ -115,3 +113,5 @@
 <?php endif; // If registration required and not logged in ?>
 
 <?php endif; // if you delete this the sky will fall on your head ?>
+
+</div>
