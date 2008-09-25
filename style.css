@@ -37,7 +37,7 @@ h2 {
 }
 
 p, ul, ol {
-	margin: 0 0 2em 0;
+	margin: 0 0 1.5em 0;
 	text-align: justify;
 	line-height: 26px;
 	font-size: 1em;
@@ -204,6 +204,10 @@ input, textarea, select {
 	background: url('images/img03.gif') repeat-x left bottom;
 }
 
+.post h2.title {
+    margin-top: 20px;
+}
+
 .post .entry {
 	font-size: 1.1em;
 }
@@ -249,6 +253,19 @@ input, textarea, select {
 
 .post .meta b {
 	display: none;
+}
+
+.post blockquote {
+    margin: 10px 0 10px 10px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+}
+
+.post pre {
+    padding: 0.5em 1em;
+    border: 1px solid #999;
+    background: #eee;
+    overflow: auto;
 }
 
 /* Comments */
