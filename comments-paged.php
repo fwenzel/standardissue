@@ -33,11 +33,11 @@
 
 	<?php foreach ($comments as $comment) : ?>
 
-		<li class="<?php if ($comment->comment_author_email == 'freeed@gmail.com') echo 'author'; else echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
-			<?php /* <div class="comment-number"><?php echo $comment_number; $comment_number += $comment_delta;?></div> */ ?>
+		<li class="<?php if (get_comment_author_email() == 'freeed@gmail.com') echo 'author'; else echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
+			<?php if (function_exists('get_avatar')) echo get_avatar(get_comment_author_email(), '40'); ?>
 			<?php comment_text() ?>
 
-			<div class="commentmetadata"<span class="commentauthor"><?php comment_author_link() ?></span> on <a href="#comment-<?php comment_ID() ?>" title="Permanent link to this comment"><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></div>
+			<div class="commentmetadata"><span class="comment-number"><?php echo $comment_number; $comment_number += $comment_delta;?></span> <span class="commentauthor"><?php comment_author_link() ?></span> on <a href="#comment-<?php comment_ID() ?>" title="Permanent link to this comment"><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></div>
 
 			<?php if ($comment->comment_approved == '0') : ?>
 			<em>Your comment is awaiting moderation.</em>
