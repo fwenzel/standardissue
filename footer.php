@@ -18,7 +18,7 @@
 		<div id="fbox3" class="box2">
 			<h2>Blogroll</h2>
 			<ul id="people">
-				<?php wp_list_bookmarks('title_li=&categorize=0'); ?>
+				<?php wp_list_bookmarks('title_li=&categorize=0&category_name=Blogroll&orderby=rand&limit=5'); ?>
 			</ul>
 		</div>
 	</div>
