@@ -334,9 +334,18 @@ input, textarea, select {
 	margin: 0 0 .7em .7em;
 }
 
+.commentlist blockquote {
+    margin: 10px 0 10px 10px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+}
+
 /* the boss' comments */
 .commentlist li.author {
 	background: #eee;
+}
+.commentlist .author blockquote {
+    border-left: 3px solid #fff;
 }
 .commentlist .author .commentmetadata,
 .commentlist .author .commentmetadata a {
