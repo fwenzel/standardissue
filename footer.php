@@ -26,6 +26,18 @@
 	<p id="legal">Copyright &copy; <?php echo date('Y'), ' '; bloginfo('name'); ?> | Powered by <a href="http://wordpress.org/">WordPress</a> | Based on design work by <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a> and <a href="http://www.freecsstemplates.org/">Free CSS Templates</a> | Some icons by <a href="http://www.famfamfam.com/lab/icons/silk/">famfamfam</a></p>
 </div>
 <!-- end footer -->
+
+<!-- Google analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-291336-2");
+pageTracker._trackPageview();
+</script>
+<!-- end analytics -->
+
 <!-- <?php echo get_num_queries(); ?> queries. <?php timer_stop(1); ?> seconds. -->
 <?php wp_footer(); ?>
 </body>
