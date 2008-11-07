@@ -292,9 +292,8 @@ input, textarea, select {
 }
 
 /* flags behind links */
-.post a[hreflang|='de'] {
-    background: url('images/flags/de.png') no-repeat 0 50%;
-    padding-left: 20px;
+.post a[hreflang]:after {
+    content: " [" attr(hreflang) "]";
 }
 
 /* Comments */
