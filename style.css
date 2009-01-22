@@ -366,6 +366,11 @@ input, textarea, select {
 	background: url('images/user_green.png') no-repeat left center;
 }
 
+#commentform textarea {
+    width: 575px;
+    height: 200px;
+}
+
 /* Sidebar */
 
 #sidebar {
