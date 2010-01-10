@@ -16,7 +16,7 @@ body {
 	margin: 80px 0 0 0;
 	padding: 0;
 	background: #FFFFFF url('images/header-bg.gif') repeat-x;
-	font-family: "Georgia", "Times New Roman", serif;
+	font-family: Palatino,"Palatino Linotype","URW Palladio L","Book Antiqua",Georgia,"Times New Roman",serif;
 	font-size: 13px;
 	color: #333333;
 }
@@ -40,7 +40,7 @@ p, ul, ol {
 	margin: 0 0 1.5em 0;
 	text-align: justify;
 	line-height: 26px;
-	font-size: 1em;
+	font-size: 1.1em;
 }
 
 a:link {
@@ -84,6 +84,11 @@ img.right,
     color: #555;
     font-size: .9em;
     font-style: italic;
+}
+
+.nowrap {
+    white-space: nowrap;
+    display: inline;
 }
 
 /* Form */
@@ -399,6 +404,10 @@ input, textarea, select {
 	margin-bottom: 10px;
 	background: url('images/img03.gif') repeat-x left bottom;
 	font-size: 16px;
+}
+
+#sidebar .widget_tag_cloud div {
+    text-align: center;
 }
 
 /* Search */
