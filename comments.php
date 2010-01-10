@@ -1,62 +1,62 @@
 <?php // Do not delete these lines
-	if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-		die ('Please do not load this page directly. Thanks!');
+    if ('comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
+        die ('Please do not load this page directly. Thanks!');
 
-	if (!empty($post->post_password)) { // if there's a password
-		if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
-			?>
+    if (!empty($post->post_password)) { // if there's a password
+        if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
+            ?>
 
-			<p class="nocomments">This post is password protected. Enter the password to view comments.</p>
+            <p class="nocomments">This post is password protected. Enter the password to view comments.</p>
 
-			<?php
-			return;
-		}
-	}
+            <?php
+            return;
+        }
+    }
 
-	/* This variable is for alternating comment background */
-	$oddcomment = 'alt';
+    /* This variable is for alternating comment background */
+    $oddcomment = 'alt';
 ?>
 
 <!-- You can start editing here. -->
 
 <div id="comments">
 <?php if ($comments) : ?>
-	<h3><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+    <h3><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
-	<ol class="commentlist">
+    <ol class="commentlist">
 
-	<?php foreach ($comments as $comment) : ?>
+    <?php foreach ($comments as $comment) : ?>
 
-		<li class="<?php if (get_comment_author_email() == 'freeed@gmail.com') echo 'author'; else echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
-			<?php if (function_exists('get_avatar')) echo get_avatar(get_comment_author_email(), '40'); ?>
-			<?php comment_text() ?>
+        <li class="<?php if (get_comment_author_email() == 'freeed@gmail.com') echo 'author'; else echo $oddcomment; ?>" id="comment-<?php comment_ID() ?>">
+            <?php if (function_exists('get_avatar')) echo get_avatar(get_comment_author_email(), '40'); ?>
+            <?php comment_text() ?>
 
-			<div class="commentmetadata"><span class="commentauthor"><?php comment_author_link() ?></span> on <a href="#comment-<?php comment_ID() ?>" title="Permanent link to this comment"><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></div>
+            <div class="commentmetadata"><span class="commentauthor"><?php comment_author_link() ?></span> on <a href="#comment-<?php comment_ID() ?>" title="Permanent link to this comment"><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></div>
 
-			<?php if ($comment->comment_approved == '0') : ?>
-			<em>Your comment is awaiting moderation.</em>
-			<?php endif; ?>
-		</li>
+            <?php if ($comment->comment_approved == '0') : ?>
+            <em>Your comment is awaiting moderation.</em>
+            <?php endif; ?>
+        </li>
 
-	<?php
-		/* Changes every other comment to a different class */
-		$oddcomment = ( empty( $oddcomment ) ) ? 'alt' : '';
-	?>
+    <?php
+        /* Changes every other comment to a different class */
+        $oddcomment = ( empty( $oddcomment ) ) ? 'alt' : '';
+    ?>
 
-	<?php endforeach; /* end for each comment */ ?>
+    <?php endforeach; /* end for each comment */ ?>
 
-	</ol>
+    </ol>
 
  <?php else : // this is displayed if there are no comments so far ?>
 
-	<?php if ('open' == $post->comment_status) : ?>
-		<!-- If comments are open, but there are no comments. -->
+    <?php if ('open' == $post->comment_status) : ?>
+        <!-- If comments are open, but there are no comments. -->
 
-	 <?php else : // comments are closed ?>
-		<!-- If comments are closed. -->
-		<p class="nocomments">Comments are closed.</p>
+     <?php else : // comments are closed ?>
+        <!-- If comments are closed. -->
+        <p class="nocomments">Comments are closed.</p>
 
-	<?php endif; ?>
+    <?php endif; ?>
 <?php endif; ?>
 
 
