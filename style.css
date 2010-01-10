@@ -212,6 +212,15 @@ input, textarea, select {
 	text-decoration: none;
 }
 
+.post h1.title.first {
+    font-size: 32px;
+    margin-top: 0;
+}
+.post h1.title {
+    font-size: 23px;
+    margin-top: 30px;
+}
+
 .post {
 }
 
@@ -219,10 +228,6 @@ input, textarea, select {
 	margin-bottom: 20px;
 	padding-bottom: 5px;
 	background: url('images/img03.gif') repeat-x left bottom;
-}
-
-.post h2.title {
-    margin-top: 20px;
 }
 
 .post .entry {

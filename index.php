@@ -12,9 +12,9 @@
 		if (have_posts()) :
 			$count = 0;
 		?>
-		<?php while (have_posts()) : the_post(); $h_tag = (++$count==1?'h1':'h2'); ?>
+		<?php while (have_posts()) : the_post(); $extraclass = (++$count==1?' first':''); ?>
 		<div class="post" id="post-<?php the_ID(); ?>">
-			<<?=$h_tag?> class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></<?=$h_tag?>>
+			<h1 class="title<?=$extraclass?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 			<div class="entry">
 				<?php the_content('Read on &raquo;'); ?>
 			</div>
