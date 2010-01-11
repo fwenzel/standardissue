@@ -47,8 +47,8 @@
         <?php else : ?>
 
         <h1>Nothing Found</h1>
-        <p>Sorry, but you've either searched for something that wasn't found, or for some other reason I don't know what do show you right now. So let me show you some cat content to ease the pain:</p>
-        <p><img src="<?php bloginfo('template_url')?>/images/cat_content.jpg" width="500" height="341" title="Cat content; source: Cute overload (http://mfrost.typepad.com/cute_overload/2008/09/where-were-thos.html)"/></p>
+        <p>Sorry, but you've either searched for something that wasn't found, or for some other reason I don't know what to show you right now. So let me show you some cat content to ease the pain:</p>
+        <p><img src="<?php bloginfo('template_url')?>/images/cat_content.jpg" width="500" height="341" title="Cat content; source: Cute overload (http://mfrost.typepad.com/cute_overload/2008/09/where-were-thos.html)" alt="Cat Content"/></p>
         <p>If you want, you can <a href="<?=get_option('home');?>/">start over on the front page</a>, or try your luck searching:</p>
         <?php include (TEMPLATEPATH . "/searchform.php"); ?>
 
