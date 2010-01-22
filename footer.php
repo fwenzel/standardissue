@@ -6,7 +6,7 @@
     <div class="wrap">
         <div id="fbox1" class="box2">
             <h2>About <?php bloginfo('name'); ?></h2>
-            <p><a href="<?php bloginfo('url');?>/">Fred</a> is a student in Information Engineering and Management, Open Source developer and musician. <?php bloginfo('name');?> is his blog about the things he runs across between American West Coast and the beautiful German southwest.</p>
+            <p><a href="<?php bloginfo('url');?>/about-me">Fred Wenzel</a> is a Software Engineer at <a href="http://mozilla.com">Mozilla</a>. <?php bloginfo('name');?> is his blog about the things he runs across between American West Coast and southern Germany.</p>
         </div>
         <div id="fbox2" class="box2">
             <h2>Subscribe</h2>
