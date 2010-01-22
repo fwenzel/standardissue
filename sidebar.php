@@ -2,7 +2,7 @@
     <div id="sidebar">
         <ul>
             <?php     /* Widgetized sidebar, if you have the plugin installed. */
-                    if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
+                    if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar') ) : ?>
             <li>
                 <?php include (TEMPLATEPATH . '/searchform.php'); ?>
             </li>

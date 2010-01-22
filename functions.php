@@ -3,7 +3,7 @@
 $GLOBALS['content_width'] = 575;
 
 if ( function_exists('register_sidebar') ) {
-    register_sidebar();
+    register_sidebar(array('name' => 'Sidebar'));
     // own search box
     register_sidebar_widget(__('Search'), 'widget_standardissue_search');
 }
