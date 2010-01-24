@@ -506,6 +506,10 @@ html>body #footer {
 #fbox1 {
     width: 310px;
 }
+#fbox1 .gravatar {
+    float: left;
+    margin: .5em .5em .5em 0;
+}
 
 #fbox2 {
     width: 200px;
