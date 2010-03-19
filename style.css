@@ -91,6 +91,11 @@ img.right,
     margin-left: 15px;
 }
 
+.entry img.alignleft, .entry img.alignright,
+.entry img.aligncenter, .entry img.alignnone {
+    -moz-box-shadow: 0px 3px 10px #777;
+}
+
 .img-label {
     display: block;
     margin: 0.4em auto;
