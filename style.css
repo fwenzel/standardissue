@@ -449,6 +449,9 @@ button:hover {
     float: right;
     width: 195px;
 }
+#sidebar input, #sidebar select {
+    font-size: 10pt;
+}
 
 #sidebar ul {
     margin: 0;
@@ -457,6 +460,7 @@ button:hover {
 }
 
 #sidebar li {
+    font-size: 10pt;
     margin-bottom: 30px;
 }
 
