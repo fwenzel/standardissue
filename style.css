@@ -112,10 +112,21 @@ legend {
     display: none;
 }
 
-input, textarea, select {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    color: #333333;
+input, textarea, select, button {
+    font-family: CallunaRegular,Georgia,"Times New Roman",serif;
+    font-size: 12pt;
+    color: #333;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    -moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+    -moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;
+}
+button:hover {
+   background-color: #f5f5f5;
 }
 
 /* Header */
