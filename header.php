@@ -27,9 +27,9 @@
         <ul>
             <li <?php if (is_home()) echo 'class="active"';?>><a href="<?php bloginfo('url');?>/">home</a></li>
             <li><a href="http://flickr.com/freeed">photos</a></li>
-            <!--<li <?php if (is_page('projects')) echo 'class="active"';?>><a href="<?php bloginfo('url');?>/projects">my projects</a></li>-->
+            <?php /* <li <?php if (is_page('projects')) echo 'class="active"';?>><a href="<?php bloginfo('url');?>/projects">my projects</a></li> */ ?>
             <li <?php if (is_page('about-me')) echo 'class="active"';?>><a href="<?php bloginfo('url');?>/about-me">about</a></li>
-            <li <?php if (is_page('impressum')) echo 'class="active"';?>><a href="<?php bloginfo('url');?>/impressum">impressum</a></li>
+            <?php /* <li <?php if (is_page('impressum')) echo 'class="active"';?>><a href="<?php bloginfo('url');?>/impressum">impressum</a></li> */ ?>
         </ul>
     </div>
 </div>
