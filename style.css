@@ -446,6 +446,9 @@ button:hover {
 #sidebar .widget_tag_cloud div {
     text-align: center;
 }
+#sidebar .widget_tag_cloud a {
+    white-space: nowrap;
+}
 
 /* Search */
 
