@@ -12,35 +12,54 @@ Released for free under a Creative Commons Attribution 2.5 License
 .
 */
 
+/* A font by Jos Buivenga (exljbris) -> http://www.exljbris.nl */
+@font-face {
+    font-family: 'CallunaRegular';
+    src: url('fonts/Calluna-Regular.eot');
+}
+
+@font-face {
+    font-family: 'CallunaRegular';
+    src: url(//:) format('no404'), url('fonts/Calluna-Regular.woff') format('woff'), url('fonts/Calluna-Regular.ttf') format('truetype'), url('fonts/Calluna-Regular.svg#Calluna-Regular') format('svg');
+}
+
+@font-face {
+    font-family: 'Goudy Bookletter 1911';
+    src: url('fonts/goudy_bookletter_1911.eot');
+    src: local('Goudy Bookletter 1911'), local('GoudyBookletter1911'), url('fonts/goudy_bookletter_1911.woff') format('woff'), url('fonts/goudy_bookletter_1911.ttf') format('truetype'), url('fonts/goudy_bookletter_1911.svg#GoudyBookletter1911') format('svg');
+}
+
+
 body {
     margin: 80px 0 0 0;
     padding: 0;
     background: #FFFFFF url('images/header-bg.gif') repeat-x;
-    font-family: Palatino,"Palatino Linotype","URW Palladio L","Book Antiqua",Georgia,"Times New Roman",serif;
-    font-size: 13px;
+    font-family: CallunaRegular,Georgia,"Times New Roman",serif;
+    font-size: 12pt;
     color: #333333;
 }
 
-h1, h2, h3 {
+h1, h2, h3,
+#menu {
     margin: 0;
     text-transform: lowercase;
+    font-family: "Goudy Bookletter 1911",Georgia,"Times New Roman",serif;
     font-weight: normal;
     color: #3E3E3E;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 24pt;
 }
 
 h2 {
-    font-size: 23px;
+    font-size: 18pt;
 }
 
 p, ul, ol {
     margin: 0 0 1.5em 0;
     text-align: justify;
-    line-height: 26px;
-    font-size: 1.1em;
+    line-height: 1.6em;
 }
 
 a:link {
@@ -143,13 +162,8 @@ button:hover {
 }
 
 #logo h1 {
-    font-size: 38px;
+    font-size: 32pt;
     color: #494949;
-}
-
-#logo h1 sup {
-    vertical-align: text-top;
-    font-size: 24px;
 }
 
 #logo h1 a {
@@ -158,7 +172,7 @@ button:hover {
 
 #logo h2 {
     margin-top: -10px;
-    font-size: 12px;
+    font-size: 14pt;
     color: #A0A0A0;
 }
 
@@ -185,11 +199,9 @@ button:hover {
 #menu a {
     display: block;
     float: left;
-    margin-left: 30px;
+    margin-left: 20px;
     padding: 7px;
     text-decoration: none;
-    font-size: 13px;
-    color: #000000;
 }
 
 #menu a:hover {
@@ -423,7 +435,7 @@ button:hover {
 #sidebar h2 {
     margin-bottom: 10px;
     background: url('images/img03.gif') repeat-x left bottom;
-    font-size: 16px;
+    font-size: 14pt;
 }
 
 #sidebar .widget_tag_cloud div {
