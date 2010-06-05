@@ -16,4 +16,3 @@ license as this.
 [CC-by]: http://creativecommons.org/licenses/by/2.5/
 [CC-by-sa]: http://creativecommons.org/licenses/by-sa/3.0/
 [orig]: http://www.freecsstemplates.org/preview/standardissue
-
