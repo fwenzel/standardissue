@@ -281,13 +281,13 @@ button:hover {
     text-decoration: none;
 }
 
-.post h1.title.first {
-    font-size: 32px;
-    margin-top: 0;
-}
 .post h1.title {
-    font-size: 23px;
+    font-size: 32px;
     margin-top: 30px;
+}
+
+.post h1.title.first {
+    margin-top: 0;
 }
 
 .post .title {
