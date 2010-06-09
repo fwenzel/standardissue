@@ -326,7 +326,8 @@ button:hover {
 }
 
 .post .meta .more {
-    padding: 2px 20px 2px 20px;
+    padding: 2px 0 2px 20px;
+    margin-right: 20px;
     background: url('images/page_link.png') no-repeat left center;
 }
 
