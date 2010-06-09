@@ -296,6 +296,14 @@ button:hover {
     background: url('images/img03.gif') repeat-x left bottom;
 }
 
+.post .entry h1,
+.post .entry h2,
+.post .entry h3,
+.post .entry h4,
+.post .entry h5,
+.post .entry h6 {
+    margin-bottom: .5em;
+}
 .post .meta {
     padding: 15px 0 60px 0;
     background: url('images/img03.gif') repeat-x;
@@ -338,6 +346,10 @@ button:hover {
 
 .post .meta b {
     display: none;
+}
+
+.post p {
+    margin: 0 0 1em;
 }
 
 .post blockquote {
