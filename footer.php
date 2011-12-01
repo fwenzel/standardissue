@@ -6,7 +6,7 @@
     <div class="wrap">
         <div id="fbox1" class="box2">
             <h2>About <?php bloginfo('name'); ?></h2>
-            <p><img src="http://www.gravatar.com/avatar/e5de50a7b017e490940c7b12eb7de99f.jpg?s=50" alt="" class="gravatar"/><a href="<?php bloginfo('url');?>/about-me">Fred Wenzel</a> is a Software Engineer at <a href="http://mozilla.com">Mozilla</a>. <?php bloginfo('name');?> is his blog about the things he runs across between American West Coast and southern Germany.</p>
+            <p><img src="http://www.gravatar.com/avatar/e5de50a7b017e490940c7b12eb7de99f.jpg?s=50" alt="" class="gravatar"/><a href="<?php bloginfo('url');?>/about-me">Fred Wenzel</a> manages the Rapid Web Development team at <a href="http://mozilla.com">Mozilla</a>. <?php bloginfo('name');?> is his blog about the things he runs across between American West Coast and southern Germany.</p>
         </div>
         <div id="fbox2" class="box2">
             <h2>Subscribe</h2>
