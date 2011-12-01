@@ -388,9 +388,12 @@ button:hover {
     margin-bottom: 0;
 }
 
-/* flags behind links */
+/* language behind links */
 .post a[hreflang]:after {
     content: " [" attr(hreflang) "]";
+    font-size: .5em;
+    opacity: .6;
+    vertical-align: super;
 }
 
 /* Comments */
