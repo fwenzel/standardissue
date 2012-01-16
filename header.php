@@ -6,7 +6,6 @@
 
 <title><?php bloginfo('name'); ?> <?php if ( is_single() ) { ?> &raquo; Blog Archive <?php } ?> <?php wp_title(); ?></title>
 
-<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /><?php /* <!-- leave this for stats --> */ ?>
 <meta name="googlebot" content="index,follow,noarchive" />
 
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
