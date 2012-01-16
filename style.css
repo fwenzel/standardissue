@@ -506,6 +506,18 @@ button:hover {
     white-space: nowrap;
 }
 
+/* Tumblr widget */
+#tumblr-widget-2 .widgettitle a {
+    text-decoration: none;
+}
+.tumblr_post p {
+    font-size: 80%;
+    margin-bottom: 0;
+}
+.tumblr_post br {
+    display: none;
+}
+
 /* Search */
 
 #search {
